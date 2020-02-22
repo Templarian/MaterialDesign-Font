@@ -8,7 +8,7 @@ The "Material Design Icons Desktop" font is built real time as changes are made 
 
 The [Webfont](https://github.com/Templarian/MaterialDesign-Webfont) is created for use by web developers to display the icons in a browser such as Chrome. This font is called "Material Design Icons". Different websites expect different versions of the webfont, so installing it locally will cause numerous conflicts as many websites use the webfont.
 
-The font in this repo was made to be be installed in your OS. This is useful for print, UX software, or design software where one might not want to use an [SVG](https://github.com/Templarian/MaterialDesign) file.
+The font in this repo was made to be be installed in your OS. This is useful for print, UX software, or software where [SVG](https://github.com/Templarian/MaterialDesign) is not supported.
 
 ## Troubleshooting
 
