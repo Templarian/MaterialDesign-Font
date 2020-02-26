@@ -177,6 +177,7 @@
 
         div.icons div {
             line-height: 2em;
+            white-space: nowrap;
         }
 
         div.icons div span {
@@ -190,27 +191,53 @@
             white-space: nowrap;
         }
 
-        div.icons div code:hover,
         div.icons div span:hover,
         div.icons div svg:hover {
             fill: #3c90be;
         }
 
-        div.icons div code:hover {
+        div.icons div code.hex:hover {
             border-color: #3c90be;
+            z-index: 1;
+            position: relative;
         }
 
-        div.icons div code {
+        div.icons div code.hex {
             border: 1px solid #DDD;
             width: 46px;
-            margin-left: 2px;
             margin-right: 4px;
-            border-radius: 4px;
+            border-radius: 0 4px 4px 0;
             display: inline-block;
             vertical-align: middle;
             text-align: center;
             line-height: 24px;
             cursor: pointer;
+        }
+
+        div.icons div code.unicode:hover {
+            border-color: #3c90be;
+            background: #3c90be;
+            color: #FFF;
+            z-index: 1;
+            position: relative;
+        }
+
+        div.icons div code.unicode {
+            border: 1px solid #DDD;
+            background: #DDD;
+            font-weight: bold;
+            margin-right: -1px;
+            padding-left: 3px;
+            padding-right: 3px;
+            border-radius: 4px 0 0 4px;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 24px;
+            cursor: pointer;
+        }
+        div.icons div code.unicode::before {
+            content: 'U';
         }
 
         div.icons div svg {
@@ -347,6 +374,7 @@
 
     <ul class="usage-list">
         <li>Click the icon to copy the SVG to your clipboard</li>
+        <li>Click the <code>U</code> value to copy the character to your clipboard</li>
         <li>Click the hex value to copy the codepoint to your clipboard</li>
         <li>Click the icon name to copy to your clipboard</li>
     </ul>
@@ -406,7 +434,11 @@
             path.setAttribute('d', icon.data);
             svg.appendChild(path);
             div.appendChild(svg);
+            var unicode = document.createElement('code');
+            unicode.setAttribute('class', 'unicode');
+            div.appendChild(unicode);
             var code = document.createElement('code');
+            code.setAttribute('class', 'hex');
             code.appendChild(document.createTextNode(icon.hex));
             div.appendChild(code);
             var span = document.createElement('span');
@@ -417,6 +449,10 @@
             };
             svg.onmouseup = function () {
                 copyText(`<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-${icon.name}" width="24" height="24" viewBox="0 0 24 24"><g><path fill-opacity="0" d="M0,0H24V24H0" /><path d="${icon.data}" /></g></svg>`);
+            };
+            unicode.onmouseup = function () {
+                console.log(icon.hex, parseInt(icon.hex, 16))
+                copyText(String.fromCodePoint(parseInt(icon.hex, 16)));
             };
             code.onmouseup = function () {
                 copyText(icon.hex);
@@ -445,7 +481,7 @@
         }
 
         function getDate() {
-            var date = {"year":2020,"month":0,"day":26,"hour":7,"minute":4};
+            var date = {"year":2020,"month":0,"day":26,"hour":7,"minute":38};
             if (date) {
                 const local = new Date(Date.UTC(date.year, date.month, date.day, date.hour, date.minute, 0))
                 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
