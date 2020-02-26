@@ -1,6 +1,6 @@
 # Material Design Icons Desktop TTF
 
-The "Material Design Icons Desktop" font is built real time as changes are made by the community. If you do not see an icon simply install the latest font file.
+The "[Material Design Icons](https://MaterialDesignIcons.com) Desktop" font is built real time as changes are made by the community. If you do not see an icon simply install the latest font file.
 
 > Note: This font does not conflict with the webfont "Material Design Icons".
 
@@ -19,3 +19,11 @@ The font in this repo was made to be be installed in your OS. This is useful for
 ## Troubleshooting
 
 Install the latest font listed in this repo.
+
+## Related
+
+- [MaterialDesignIcons.com](https://materialdesignicons.com/)
+- [MaterialDesign Repo](https://github.com/Templarian/MaterialDesign/)
+- [MaterialDesign-Webfont Repo](https://github.com/Templarian/MaterialDesign-Webfont)
+- [MaterialDesign-SVG Repo](https://github.com/Templarian/MaterialDesign-SVG)
+- [MaterialDesign-JS Repo](https://github.com/Templarian/MaterialDesign-JS)
