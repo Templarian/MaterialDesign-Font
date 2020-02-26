@@ -22,8 +22,8 @@ Install the latest font listed in this repo.
 
 ## Related
 
-- [MaterialDesignIcons.com](https://materialdesignicons.com/)
-- [MaterialDesign Repo](https://github.com/Templarian/MaterialDesign/)
-- [MaterialDesign-Webfont Repo](https://github.com/Templarian/MaterialDesign-Webfont)
-- [MaterialDesign-SVG Repo](https://github.com/Templarian/MaterialDesign-SVG)
-- [MaterialDesign-JS Repo](https://github.com/Templarian/MaterialDesign-JS)
+- [MaterialDesignIcons.com](https://materialdesignicons.com/) - Website
+- [MaterialDesign Repo](https://github.com/Templarian/MaterialDesign/) - Main Icon Repo
+- [MaterialDesign-Webfont Repo](https://github.com/Templarian/MaterialDesign-Webfont) - Webfont Distribution NPM `@mdi/font`
+- [MaterialDesign-SVG Repo](https://github.com/Templarian/MaterialDesign-SVG) - SVG Distribution NPM `@mdi/svg`
+- [MaterialDesign-JS Repo](https://github.com/Templarian/MaterialDesign-JS) - TypeScript / JS Distribution `@mdi/js`
