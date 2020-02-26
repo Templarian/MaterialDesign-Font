@@ -340,7 +340,7 @@
             <path d="M0,0H8V3H18V0H26V8H23V18H26V26H18V23H8V21H18V18H21V8H18V5H8V8H5V18H8V26H0V18H3V8H0V0M2,2V6H6V2H2M2,20V24H6V20H2M20,2V6H24V2H20M20,20V24H24V20H20Z"></path>
         </svg>
         Material Design Icons Desktop
-        <span class="date">January 26, 2020 5:39 AM</span>
+        <span class="date" id="date" style="display:none">January 0, 0000</span>
     </h1>
 
     <h2 class="usage">Cheatsheet Usage</h2>
@@ -351,7 +351,7 @@
         <li>Click the icon name to copy to your clipboard</li>
     </ul>
 
-    <h2 class="newicons"><span>New</span> Icons <small id="newIconsCount">-</small></h2>
+    <h2 class="newicons" id="newIconsHeader"><span>New</span> Icons <small id="newIconsCount">-</small></h2>
     <div class="icons" id="newIcons"></div>
 
     <h2 class="icons">All Icons <small id="iconsCount">-</small></h2>
@@ -432,6 +432,27 @@
             }
             return div;
         }
+
+        function formatAMPM(date) {
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var ampm = hours >= 12 ? 'PM' : 'AM';
+            hours = hours % 12;
+            hours = hours ? hours : 12; // the hour '0' should be '12'
+            minutes = minutes < 10 ? '0'+minutes : minutes;
+            var strTime = hours + ':' + minutes + ' ' + ampm;
+            return strTime;
+        }
+
+        function getDate() {
+            var date = {"year":2020,"month":0,"day":26,"hour":6,"minute":34};
+            if (date) {
+                const local = new Date(Date.UTC(date.year, date.month, date.day, date.hour, date.minute, 0))
+                const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+                return `${months[local.getMonth()]} ${local.getDate()}, ${local.getFullYear()} ${formatAMPM(local)}`;
+            }
+            return '-';
+        }
         (function () {
             var iconsCount = 0;
             var newIconsCount = 0;
@@ -460,7 +481,13 @@
             }
             document.getElementById('iconsCount').innerText = iconsCount;
             document.getElementById('newIconsCount').innerText = newIconsCount;
+            if (newIconsCount === 0) {
+                document.getElementById('newIconsHeader').style.display = 'none';
+                document.getElementById('newIcons').style.display = 'none';
+            }
             document.getElementById('deprecatedIconsCount').innerText = deprecatedIconsCount;
+            document.getElementById('date').innerText = getDate();
+            document.getElementById('date').style.display = 'inline';
         })();
     </script>
 
