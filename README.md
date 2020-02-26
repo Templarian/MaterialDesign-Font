@@ -8,7 +8,7 @@ The "Material Design Icons Desktop" font is built real time as changes are made 
 
 ## Cheatsheet
 
-Download the [cheatsheet.html](./cheatsheet.html) which allows one click copy of the font character, SVG path, codepoint or icon name which can be pasted.
+Download the <a href="./cheatsheet.html" download>cheatsheet.html</a> which allows one click copy of the font character, SVG path, codepoint or icon name which can be pasted.
 
 ## Font vs Webfont
 
