@@ -416,7 +416,7 @@
                 alert(icon.name);
             };
             svg.onmouseup = function () {
-                copyText(String.fromCodePoint(parseInt(icon.hex, 16)));
+                copyText(`<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-${icon.name}" width="24" height="24" viewBox="0 0 24 24"><g><path fill-opacity="0" d="M0,0H24V24H0" /><path d="${icon.data}" /></g></svg>`);
             };
             code.onmouseup = function () {
                 copyText(icon.hex);
@@ -445,7 +445,7 @@
         }
 
         function getDate() {
-            var date = {"year":2020,"month":0,"day":26,"hour":6,"minute":34};
+            var date = {"year":2020,"month":0,"day":26,"hour":7,"minute":4};
             if (date) {
                 const local = new Date(Date.UTC(date.year, date.month, date.day, date.hour, date.minute, 0))
                 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
