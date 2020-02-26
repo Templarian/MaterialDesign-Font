@@ -6,6 +6,10 @@ The "Material Design Icons Desktop" font is built real time as changes are made 
 
 ![Windows 10 Fonts](https://i.imgur.com/WjjRGWj.png)
 
+## Usage
+
+Download the [cheatsheet.html](./cheatsheet.html) which allows one click copy of the font character, SVG path, codepoint or icon name which can be pasted.
+
 ## Font vs Webfont
 
 The [Webfont](https://github.com/Templarian/MaterialDesign-Webfont) is created for use by web developers to display the icons in a browser such as Chrome. This font is called "Material Design Icons". Different websites expect different versions of the webfont, so installing it locally will cause numerous conflicts as many websites use the webfont.
