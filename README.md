@@ -6,7 +6,7 @@ The "Material Design Icons Desktop" font is built real time as changes are made 
 
 ![Windows 10 Fonts](https://i.imgur.com/WjjRGWj.png)
 
-## Usage
+## Cheatsheet
 
 Download the [cheatsheet.html](./cheatsheet.html) which allows one click copy of the font character, SVG path, codepoint or icon name which can be pasted.
 
